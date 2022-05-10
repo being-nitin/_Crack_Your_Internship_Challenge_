@@ -11,9 +11,9 @@ public class SearchInRange {
         }
         return -1;
     }
-
     public static void main(String[] args) {
         int[] arr = {1,6,4,2,8,7};
+        // will search in in a range start to end
         System.out.println(search(arr,6,1,3));
     }
 }
