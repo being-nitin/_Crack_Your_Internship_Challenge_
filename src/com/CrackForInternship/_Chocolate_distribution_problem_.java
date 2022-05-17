@@ -42,13 +42,21 @@ public class _Chocolate_distribution_problem_ {
     between maximum and minimum.
 
      */
+
     public static int difference(int[] nums,int m){
-        for(int i=0;i<m;i++){
-            int
-
+        Arrays.sort(nums);
+        int mindiff = Integer.MAX_VALUE;
+        for(int i=0;i+m-1<nums.length;i++){
+            int min = nums[i+m-1]-nums[i];
+            if(min<mindiff){
+                mindiff=min;
+            }
         }
-
-
+        return mindiff;
     }
-
+    public static void main(String[] args) {
+        int[] arr = {3, 4, 1, 9, 56, 7, 9, 12};
+        int n = difference(arr,5);
+        System.out.println(n);
+    }
 }
