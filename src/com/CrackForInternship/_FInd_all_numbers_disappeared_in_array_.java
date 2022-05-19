@@ -22,6 +22,7 @@ public class _FInd_all_numbers_disappeared_in_array_ {
         ArrayList<Integer> list = new ArrayList<>();
         int[] result = new int[nums.length+1];
         for(int num:nums){
+            // storing the element at the corresponding index
             result[num] = num;
         }
         for(int i=1;i<result.length;i++){
