@@ -1,16 +1,13 @@
 class Solution {
     public int missingNumber(int[] nums) {
-        Arrays.sort(nums);
-            for(int index=0;index<nums.length;index++){
-                if(nums[index]!=index){
-                   return index; 
+        int res=0,xor=0,k=0;
+            for(int i=0;i<nums.length;i++){
+                res = res^nums[i];
+                xor = xor^i;
+                k++;
                 }
-            }
-        return nums.length;
-    }
-    void swap(int[] nums,int first, int second){
-        int temp = nums[first];
-        nums[first] = nums[second];
-        nums[second] = temp;
-    }
+        xor = xor^(k);
+            
+        return xor^res;
+}
 }
